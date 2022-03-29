@@ -1,0 +1,37 @@
+name-template: 'DRAFT'
+tag-template: 'DRAFT'
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'type: feature :new:'
+      - 'type: improvement :+1:'
+      - 'type: epic'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'type: bug :bug:'
+  - title: '🛠 Other'
+    labels:
+      - 'type: chore :yawning_face:'
+      - 'type: task'
+  - title: '📖 Documentation'
+    label: 'type: RFC :speech_balloon:'
+  - title: 'Security issue'
+    label: 'type: security issue :warning:'
+exclude-labels:
+  - 'skip-changelog'
+change-template: '- $TITLE (PR: #$NUMBER) $AUTHOR'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
+template: |
+  ## Changes
+  $CHANGES
